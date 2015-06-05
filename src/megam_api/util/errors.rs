@@ -1,3 +1,5 @@
+use rustc_serialize::json;
+
 pub type MegResult<T> = Result<T, MegError>;
 
 #[derive(Debug)]
@@ -6,13 +8,6 @@ pub struct MegError {
     pub msg: String,
     pub more: String,
     pub links: String,
-}
-
-#[derive(Debug)]
-pub enum Error {
-			Curl(curl::ErrCode),
-	    NotOkResponse,	
-			Unauthorized, 
 }
 
 #[derive(RustcEncodable, Debug, RustcDecodable)]

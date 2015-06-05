@@ -8,4 +8,3 @@ extern crate time;
 
 pub mod util;
 pub mod api;
-pub mod errors;
